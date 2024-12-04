@@ -1,0 +1,220 @@
+:root {
+    --primary: #6366f1;
+    --background: #ffffff;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --card-bg: #ffffff;
+    --quote-bg: #f1f5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: var(--card-bg);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    border: 4px solid #f1f5f9;
+    border-radius: 100%;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    letter-spacing: -0.025em;
+}
+
+.subtitle {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.tech-badge {
+    background: var(--quote-bg);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--text);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tech-badge i {
+    font-size: 1.25rem;
+    color: var(--primary);
+}
+
+.tech-badge:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.tech-badge:hover i {
+    color: white;
+}
+
+.quotes-section {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.quote-card {
+    background: var(--quote-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: left;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    opacity: 0.2;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.quote-author {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    .container {
+        padding: 2rem 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tech-stack {
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .tech-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .quote-card {
+        padding: 1.5rem;
+    }
+
+    .quote-text {
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-wrapper, .tech-badge, .quote-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.tech-badge:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.tech-badge:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.quote-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.quote-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
