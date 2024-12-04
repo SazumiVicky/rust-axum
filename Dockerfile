@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install -y pkg-config && \
     rm -rf /var/lib/apt/lists/*
 
-COPY Cargo.toml
+COPY Cargo.toml/
 
 RUN mkdir src && \
     echo "fn main() {}" > src/main.rs
