@@ -54,7 +54,7 @@ async fn main() {
         .fallback_service(static_files_service);
 
     let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
-    println!("🚀 Portfolio running at http://localhost:3000");
+    println!("🚀 http://localhost:3000");
     
     axum::serve(
         tokio::net::TcpListener::bind(addr).await.unwrap(),
